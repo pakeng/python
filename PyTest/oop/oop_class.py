@@ -1,4 +1,27 @@
 # 测试面向对象编程
+class People(object):
+
+    def __init__(self, human_id=-1):
+        self.__dna = None
+        self.__id = human_id
+        self.__type = 'HUMAN'
+
+    def get_type(self):
+        return self.__type
+
+    def get_id(self):
+        return self.__id
+
+    def get_dna(self):
+        return self.__dna
+
+    def print_info(self):
+        print('id = ', self.__id, 'type = ', self.__type, 'DNA = ', self.__dna)
+
+    def set_DNA(self, param):
+        self.__dna = param
+
+
 class Student(object):
 
     def __init__(self):
@@ -25,3 +48,6 @@ if __name__ == '__main__':
     student.get_info()
     student.set_name("小B")
     student.get_info()
+    human1 = People(999)
+    human1.set_DNA("com.vito.python.people")
+    human1.print_info()
